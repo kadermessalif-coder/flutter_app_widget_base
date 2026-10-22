@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
                 padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   color: Colors.blueAccent,
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(18),
                 ),
                 child: Text(
                   'Boîte stylisée avec Container',
@@ -29,6 +29,17 @@ class MainApp extends StatelessWidget {
                 ),
               ),
               Text('Un autre texte'),
+              Stack(
+                alignment: Alignment.topRight,
+                children: [
+                  Container(width: 200, height: 200, color: Colors.blue[100]),
+                  Icon(Icons.star, size: 100, color: Colors.amber),
+                  Text(
+                    "Superposé !",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
