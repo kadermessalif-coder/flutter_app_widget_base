@@ -13,15 +13,17 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text('Hello World!'),
               Text('Bienvenue dans Flutter !'),
               Container(
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(16),
+                margin: EdgeInsets.all(10),
+                padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
-                  color: Colors.blueAccent,
-                  borderRadius: BorderRadius.circular(18),
+                  color: Colors.deepPurple,
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
                   'Boîte stylisée avec Container',
@@ -30,18 +32,18 @@ class MainApp extends StatelessWidget {
               ),
               Text('Un autre texte'),
               Stack(
-                alignment: Alignment.topRight,
+                alignment: Alignment.bottomLeft,
                 children: [
-                  Container(width: 200, height: 200, color: Colors.blue[100]),
-                  Icon(Icons.star, size: 100, color: Colors.amber),
+                  Container(width: 150, height: 150, color: Colors.blue[100]),
+                  Icon(Icons.star, size: 80, color: Colors.amber),
                   Text(
                     "Superposé !",
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                   ),
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Icon(Icons.home, color: Colors.blue, size: 40),
@@ -54,10 +56,10 @@ class MainApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Titre principal', style: TextStyle(fontSize: 30)),
-                  SizedBox(height: 20),
+                  Text('Titre principal', style: TextStyle(fontSize: 26)),
+                  SizedBox(height: 10),
                   Text('Sous-titre ou description',
-                      style: TextStyle(fontSize: 16)),
+                      style: TextStyle(fontSize: 14)),
                   Icon(Icons.thumb_up, color: Colors.green, size: 40),
                 ],
               ),
