@@ -9,14 +9,30 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-     body: Center(
-     child: Column(
-       mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text('Hello World!'),
-        SizedBox(height: 10),
-        Text('est ce que vous etes prets'),
-    ],
-  ),
-),
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Column(
+            children: [
+              Text('Hello World!'),
+              Text('Bienvenue dans Flutter !'),
+              Container(
+                margin: EdgeInsets.all(20),
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Text(
+                  'Boîte stylisée avec Container',
+                  style: TextStyle(color: Colors.white, fontSize: 18),
+                ),
+              ),
+              Text('Un autre texte'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
